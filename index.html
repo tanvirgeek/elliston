@@ -23,14 +23,15 @@
     Average color can be computed by opening an image in Photoshop and shrinking it down to 1 pixel
   -->
   
-  <meta itemprop="defaultBackground" content="/images/background.png" data-width="1140" data-height="350" data-position="c" data-style="fill">
+  <meta itemprop="defaultBackground" content="/images/background.png" data-width="1140" data-height="350" data-position="c" data-style="tile" data-color="#665b42">
   <meta itemprop="backgroundContainer" content="#my-pop-title">
 
 
   <!--
-    Theme 
+    Theme styles
     The Custom style presents Populr's end users with a color picker that sets the @custom-color variable
   -->
+  
   <meta itemprop="palette" content="palette-default" title="Default" data-preview="#EA5859">
   <meta itemprop="palette" content="palette-custom" data-preview="custom">
   <meta itemprop="palette" content="palette-Neimar" title="Neimar" data-preview="#9266BE">
@@ -54,7 +55,7 @@
     <div id="cool-header">
         <div id="cool-header-responsive-problem-solving-div">
             <div id="cool-header-inner">
-                {{logo max_width=120 max_height=40}}
+                {{logo max_width=248 max_height=48}}
                 {{pop_links}}
             </div>
         </div>
@@ -115,7 +116,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -126,7 +127,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -137,7 +138,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -148,7 +149,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -240,7 +241,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -251,7 +252,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -262,7 +263,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}
@@ -273,7 +274,7 @@
         <ul class="documents">
           {{#documents}}
             {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-circle-arrow-right" /> {{title}}</a></li>
+            <li><a href="{{original_url}}"><button class="download-button link-btn"><i class="icon icon-download-alt"/><span>Download</span></button><div id="doc-title">{{title}}</div></a></li>
           {{/documents}}
         </ul>
       {{/asset}}

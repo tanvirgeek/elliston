@@ -7,6 +7,8 @@
 // You must import variables.less before importing populr_mixins.less
 @import 'palette-custom';
 @import 'palette-Neimar';
+@import 'palette-Messi';
+@import 'palette-Ronaldo';
 @import 'palette-default';
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
@@ -48,6 +50,8 @@
   line-height:24px;
 }
 
+.prevnext{display:none!important;}
+
 #pop {
   font-family: @body-font-family;
   color: @text-color;
@@ -56,6 +60,13 @@
 
   a {
     color: @link-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    &:hover{color: #4c4c4c;}
     &:active { color: lighten(@link-color, 20%); }
   }
 }
@@ -71,35 +82,41 @@
 #main-content { margin: 0 auto; }
 
 // Logo helper
-#pop-logo { margin: 20px auto; }
+#pop-logo { margin: 0 auto; }
+
+.populr-webicon{
+    width:48px;
+    height:48px;
+}
 //cool header
 
 #cool-header{
+    border-top:3px solid #232323;
     position: relative;
     background-color: #323232;
     width:100%;
-    z-index:1000!important;
     overflow: hidden;
-    padding: 10px 0;
     #cool-header-inner{
-        width: 1080px;
-        padding: 0 30px;
-        height: 98px;
+        width: 1140px;
+        padding: 25px 0;
         margin: 0 auto;
-        #pop-logo { max-width:120px;float:left; }
+        #pop-logo { float:left; }
         #pop-links { float:right;  text-align:right!important;margin:0!important; }
     }
 }
 
 // Pop title
 #my-pop-title{
-    width: 1080px;
+    width: auto;
     padding: 121px 30px;
     overflow: hidden;
     text-align: center;
     margin: auto;
+    border-top: 10px solid #F8F8F8;
+    border-bottom: 10px solid #F8F8F8;
 }
 #pop-title {
+    max-width: 1080px;
     text-align: center!important;
     padding: 0!important; 
     font-size:	60px;
@@ -138,23 +155,106 @@
 #populr > #image-slider-themes > .basic();
 
 // Document asset styling
-.documents {
-  margin: 10px auto;
+#doc-title{
+    display: table-cell;
+    line-height: 1.4;
+    text-align: left;
+    vertical-align: middle;
+    height:39px;
+    padding-right:10px;
+    color: #4c4c4c!important;
+    font-size:14px;
+    text-transform: capitalize;
+    max-width:227px;
+}
 
+.link-btn{
+    font-size:13px;
+    font-weight:300!important;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 14px 29px!important;
+    font-size: 13px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 14px 29px;
+    border: none;
+    -webkit-transition: all 0.3s linear 0s!important;
+    -moz-transition: all 0.3s linear 0s!important;
+    -o-transition: all 0.3s linear 0s!important;
+    -ms-transition: all 0.3s linear 0s!important;
+    transition: all 0.3s linear 0s!important;
+    &:hover{
+        background-color:#4C4C4C!important;
+        -webkit-transition: none!important;
+        -moz-transition: none!important;
+        -o-transition: none!important;
+        -ms-transition: none!important;
+        transition: none!important;
+    }
+}
+
+
+.documents {
+  margin: 0 auto;
+  padding: 30px 0;
   li { 
     margin-bottom: 1em;
-
+    padding:10px;
+    display: block;
+    text-align: left;
     a {
+      display: block;
       text-decoration: none;
       line-height: 1.2;
+      overflow: hidden;
+      varticle-align: middle;
+      .download-button{
+        border:0;
+        float: left;
+        margin: 0 10px 8px 0;
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+        text-decoration: none;
+        font-style: normal;
+        cursor: pointer;
+        display: inline-block!important;
+        position: relative;
+        line-height:40px;
+        padding: 14px 29px;
+        vertical-align: baseline;
+        text-shadow: none!important;
+        font-family:@body-font-family;
+        font-size:13px;
+        font-weight:300!important;
+        text-transform: uppercase;
+        &:hover{i.icon{color:rgba(255, 255, 255, 1);}}
+      }
+      i.icon { 
+        font-style: normal !important; text-align: center; vertical-align: middle;
+        font-size: 18px; margin-right:8px;position: relative; top:-1px; color: rgba(255, 255, 255, 0.8);
+        transition: color 0.5s ease;
+        -webkit-transition: color 0.5s ease;
+        -moz-transition: color 0.5s ease;
+        -ms-transition: color 0.5s ease;
+        -o-transition: color 0.5s ease;
+      }
       
-      i.icon { font-style: normal !important; }
     }
   }
 }
+//embed
+.embed{
+    margin-bottom:15px;
+}
+
 //styling acording to asset size
 #top-region{
-    .columnizer-cols1 .columnizer-row-inner, .columnizer-cols2 .columnizer-row-inner{
+    .columnizer-cols1, .columnizer-cols2{
         background-color: #f3f3f3;
         .asset-title {
             font-size: 36px;
@@ -170,10 +270,10 @@
             line-height: 1.7;
         }
     }
-    .columnizer-cols2 .columnizer-row-inner{
+    .columnizer-cols2{
             background-color: #ffffff;
     }
-    .columnizer-cols3 .columnizer-row-inner{
+    .columnizer-cols3{
         background-color: #ffffff;
         .asset-title {
             font-size: 24x;
@@ -181,6 +281,7 @@
             line-height:1.45;
             text-align: center;
             color:#4c4c4c;
+            letter-spacing:-1px;
         }
         .description, .body, .description li, .body li,  {
             color: #4c4c4c;
@@ -189,7 +290,7 @@
             line-height: 24px;
         }
     }
-    .columnizer-cols4 .columnizer-row-inner{
+    .columnizer-cols4{
         background-color: #ffffff;
         .asset-title {
             font-size: 24x;
@@ -197,6 +298,7 @@
             line-height:1.45;
             text-align: center;
             color:#4c4c4c;
+            letter-spacing:-1px;
         }
         .description, .body, .description li, .body li,  {
             color: #9b9b9b;
@@ -208,7 +310,16 @@
 }
 
 #bottom-region{
-         .columnizer-row .columnizer-row-inner{
+         border-top: 5px solid #323232;
+         a {
+            &:hover{color: #8c8c8c}
+         }
+         .link-btn:hover{
+            background-color:#F3F3F3!important;
+            color:#8c8c8c!important;
+            i.icon{color:#8c8c8c!important;}
+         }
+         .columnizer-row{
              background-color: #4c4c4c;
             .asset-title {
                 color:#f5f5f5;
@@ -223,35 +334,65 @@
                 line-height: 1.71;
             }
         }
-        .columnizer-cols1 .columnizer-row-inner, .columnizer-cols2 .columnizer-row-inner{
+        .columnizer-cols1, .columnizer-cols2{
+            padding-top: 72px;
+            padding-bottom: 72px;
             .asset-title {
                 font-size: 36px;
+                letter-spacing: -2px;
                 
             }
             .description, .body, .description li, .body li,  {
                 font-size: 18px;
             }
         }
-        .columnizer-cols3 .columnizer-row-inner{
+        .columnizer-cols3{
             .asset-title {
                 font-size: 24x;
                 letter-spacing: -1px;
             }
         }
-        .columnizer-cols4 .columnizer-row-inner{
+        .columnizer-cols4{
             .asset-title {
                 font-size: 24x;
                 letter-spacing: -1px;
             }
         }
+        #doc-title{
+            color: #8c8c8c!important;
+        }
+}
+//padding-top bottom
+.columnizer-cols1, .columnizer-cols2{
+            padding-top: 72px;
+            padding-bottom: 72px;
+            .asset-title{
+                margin-bottom:32px;
+            }
+}
+
+.columnizer-cols3, .columnizer-cols4{
+            padding-top: 80px;
+            padding-bottom: 80px;
+            .asset-title{
+                margin-bottom:27px;
+            }
+}
+
+
+// first row always white
+
+#top-region .columnizer-row:nth-of-type(1){
+    background-color: white;
 }
 
 .footer{
     text-color: #808080;
     background-color: #323232;
     padding:30px;
-    height:358px;
+    border-top: 5px solid #323232;
 }
+
 
 #pop-shearing {
     text-align: center;
