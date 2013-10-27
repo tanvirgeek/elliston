@@ -1,0 +1,298 @@
+/************************************************************************
+// For extensive details about creating a Populr theme, please visit
+// http://developers.populr.me/theming
+*/
+
+
+// You must import variables.less before importing populr_mixins.less
+@import 'variables';
+@import 'http://populr.me/assets/developers/populr_mixins.less';
+@import 'preboot';
+
+
+// Call preboot.less's reset to reduce browser inconsistencies
+#reset > .global-reset();
+
+
+/////////////////////////////////////////////////////////////////////////
+// Typography defaults
+
+@text-color: #8C8C8C;
+// @custom-color is defined in variables.less
+@link-color: @custom-color;
+
+// Title text defaults
+// @headline-font-family is defined in variables.less
+.headline-text() {
+  font-family: @headline-font-family;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.pop-title-text() {
+  font-family: @headline-font-family;
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+// Body text defaults
+@body-font-family: 'Open Sans', Arial, sans-serif;
+
+.body-text() {
+  font-family: @body-font-family;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight:400;
+  line-height:24px;
+}
+
+#pop {
+  font-family: @body-font-family;
+  color: @text-color;
+  i, em { font-style: italic; }
+  b, strong { font-weight: 700; }
+
+  a {
+    color: @link-color;
+    &:active { color: lighten(@link-color, 20%); }
+  }
+}
+
+// End typography defaults
+/////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////
+// Structure
+
+// Content wrapper
+#main-content { margin: 0 auto; }
+
+// Logo helper
+#pop-logo { margin: 20px auto; }
+//cool header
+
+#cool-header{
+    position: relative;
+    background-color: #323232;
+    width:100%;
+    z-index:1000!important;
+    overflow: hidden;
+    padding: 10px 0;
+    #cool-header-inner{
+        width: 1080px;
+        padding: 0 30px;
+        height: 98px;
+        margin: 0 auto;
+        #pop-logo { max-width:120px;float:left; }
+        #pop-links { float:right;  text-align:right!important;margin:0!important; }
+    }
+}
+
+// Pop title
+#my-pop-title{
+    width: 1080px;
+    padding: 30px;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+#pop-title {
+    text-align: center!important;
+    padding: 0!important; 
+    font-size:	60px;
+    font-weight:	700;
+    color:	#323232;
+    text-transform:	uppercase;
+    letter-spacing:	-3px;
+    line-height:	48px;
+    #populr > .text-color-over-color(@background-color);
+}
+
+
+
+.columnizer-col {
+  padding: 10px 0;
+}
+
+// Assets
+.asset-title {
+  .headline-text();
+  margin: 10px 0;
+}
+
+.description, .body {
+  .body-text();
+
+  margin: 10px 0;
+  ul, ol { margin: .5em 0 .5em 1.5em; }
+  ul li { list-style-type: disc; }
+  ol li { list-style-type: decimal; }
+}
+
+// Text asset styling
+
+// Image asset styling
+#populr > #image-slider-themes > .basic();
+
+// Document asset styling
+.documents {
+  margin: 10px auto;
+
+  li { 
+    margin-bottom: 1em;
+
+    a {
+      text-decoration: none;
+      line-height: 1.2;
+      
+      i.icon { font-style: normal !important; }
+    }
+  }
+}
+//styling acording to asset size
+#top-region{
+    .columnizer-cols1 .columnizer-row-inner, .columnizer-cols2 .columnizer-row-inner{
+        background-color: #f3f3f3;
+        .asset-title {
+            font-size: 36px;
+            font-weight:300!important;
+            line-height:1.45;
+            text-align: center;
+            color:#4c4c4c;
+        }
+        .description, .body, .description li, .body li,  {
+            color: #4C4C4C;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.7;
+        }
+    }
+    .columnizer-cols2 .columnizer-row-inner{
+            background-color: #ffffff;
+    }
+    .columnizer-cols3 .columnizer-row-inner{
+        background-color: #ffffff;
+        .asset-title {
+            font-size: 24x;
+            font-weight:300!important;
+            line-height:1.45;
+            text-align: center;
+            color:#4c4c4c;
+        }
+        .description, .body, .description li, .body li,  {
+            color: #4c4c4c;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 24px;
+        }
+    }
+    .columnizer-cols4 .columnizer-row-inner{
+        background-color: #ffffff;
+        .asset-title {
+            font-size: 24x;
+            font-weight:300!important;
+            line-height:1.45;
+            text-align: center;
+            color:#4c4c4c;
+        }
+        .description, .body, .description li, .body li,  {
+            color: #9b9b9b;
+            font-size: 14px;
+            font-weight: normal;
+            line-height:1.71;
+        }
+    }
+}
+
+#bottom-region{
+         .columnizer-row .columnizer-row-inner{
+             background-color: #4c4c4c;
+            .asset-title {
+                color:#f5f5f5;
+                line-height: 1.45;
+                text-align: center;
+                font-weight:300!important;
+            }
+            .description, .body, .description li, .body li,  {
+                color: #808080;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.71;
+            }
+        }
+        .columnizer-cols1 .columnizer-row-inner, .columnizer-cols2 .columnizer-row-inner{
+            .asset-title {
+                font-size: 36px;
+                
+            }
+            .description, .body, .description li, .body li,  {
+                font-size: 18px;
+            }
+        }
+        .columnizer-cols3 .columnizer-row-inner{
+            .asset-title {
+                font-size: 24x;
+                letter-spacing: -1px;
+            }
+        }
+        .columnizer-cols4 .columnizer-row-inner{
+            .asset-title {
+                font-size: 24x;
+                letter-spacing: -1px;
+            }
+        }
+}
+
+.footer{
+    text-color: #808080;
+    background-color: #323232;
+    width:1080px;
+    margin: auto;
+    padding:30px;
+    height:358px;
+}
+
+
+// Clearfix
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+// End structure
+/////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////
+// Mobile
+//
+// The Populr mobile reset will handle some of the basics of mobilizing 
+// your theme, such as stacking all of the assets vertically and scaling 
+// them to 100% of the width of their container. However, you'll have to 
+// fine tune the styling to make your theme look really good on mobile
+// devices.
+
+@media screen and (max-width: 960px) {
+  #populr > .mobile-reset();
+
+  // Edit the grid for mobile
+  .columnizer-row-inner, #pop-title { max-width: 640px; }
+  .columnizer-col { margin: 0 10px 20px !important; }
+
+  // Edit the typography for mobile
+  #pop-title { font-size: 40px !important; }
+  .asset-title { font-size: 24px !important; }
+  .description, .body, .description li, .body li { font-size: 14px !important; }
+  .asset-title, .description, .body, .description li, .body li { text-align: left !important; }
+}
+
+@media screen and (max-width: 600px) {
+  #pop-title { font-size: 32px !important; }
+  .asset-title { font-size: 20px !important; }
+}
