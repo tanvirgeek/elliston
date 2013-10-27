@@ -5,6 +5,9 @@
 
 
 // You must import variables.less before importing populr_mixins.less
+@import 'palette-custom';
+@import 'palette-Neimar';
+@import 'palette-default';
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'preboot';
@@ -246,12 +249,18 @@
 .footer{
     text-color: #808080;
     background-color: #323232;
-    width:1080px;
-    margin: auto;
     padding:30px;
     height:358px;
 }
 
+#pop-shearing {
+    text-align: center;
+    max-width:1080px;
+    margin: auto;
+    a{
+        display: inline-block !important;
+    }
+}
 
 // Clearfix
 .clearfix:after {
