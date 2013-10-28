@@ -21,7 +21,6 @@
 
 /////////////////////////////////////////////////////////////////////////
 // Typography defaults
-
 @text-color: #8C8C8C;
 // @custom-color is defined in variables.less
 @link-color: @custom-color;
@@ -51,6 +50,8 @@
 }
 
 .prevnext{display:none!important;}
+
+
 
 #pop {
   font-family: @body-font-family;
@@ -100,8 +101,10 @@
     #cool-header-inner{
         width: 1140px;
         margin: 0 auto;
+        overflow:hidden;
+        padding: 0 30px;
         #pop-logo { float:left; }
-        #pop-links { float:right;  text-align:right!important;margin:0!important; }
+        #pop-links { float:right;  text-align:right!important;margin:0!important; padding:8px 0; }
     }
 }
 
@@ -154,7 +157,40 @@
 
 // Image asset styling
 #populr > #image-slider-themes > .basic();
-
+.my-image-hover-div{
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+    .my-center{
+        position:absolute;
+        display:table;
+        width:100%;
+        margin-top:-20px;
+        padding:0;
+        top:50%;
+        left:0;
+        text-align:center;
+        z-index:1000;
+        opacity:0;
+        transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        .icon{
+            text-align:center;
+            color:#EA5859;
+            font-size:39px;
+            font-style:normal!important;
+        }
+    }
+    &:hover .my-center{opacity:1}
+    &:hover{opacity:.9}
+    
+}
 // Document asset styling
 #doc-title{
     display: table-cell;
@@ -435,7 +471,9 @@
   // Edit the grid for mobile
   .columnizer-row-inner, #pop-title { max-width: 640px; width:auto!important; }
   .columnizer-col { margin: 0 10px 20px !important; }
-  
+  .cool-header-inner{
+        width:auto!important;
+  }
   .columnizer-row {
             padding-top:40px!important;
             padding-bottom:40px!important;
