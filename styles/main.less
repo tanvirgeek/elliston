@@ -109,11 +109,11 @@
 // Pop title
 #my-pop-title{
     width: auto;
-    padding: 121px 0;
+    padding: 79px 0;
     overflow: hidden;
     text-align: left;
-    border-top: 10px solid ;
-    border-bottom: 10px solid ;
+    border-top: 10px solid darken(#F8F8F8,4%);
+    border-bottom: 10px solid darken(#F8F8F8,4%);
 }
 #pop-title {
     max-width: 1060px;
@@ -283,6 +283,24 @@
     }
   }
 }
+
+.columnizer-cols3,.columnizer-cols4{
+        
+        .download-button{
+            margin:0 0 10px 0;
+        }
+         
+        #doc-title{
+            display: block;
+            margin: 0;
+        }
+        
+        .documents li a .download-button{
+            float: none;
+        }
+}
+
+
 //embed
 
 .asset-type-embedgroup.asset-size-1 .embed { height: 450px; }
@@ -405,28 +423,23 @@
         }
 }
 //padding-top bottom
-.columnizer-cols1{
-    padding-top:0;
-    padding-bottom:15px;
-}
-
-.columnizer-cols2{
-            padding-top: 35px;
-            padding-bottom: 35px;
+.columnizer-cols1,.columnizer-cols2{
+            padding-top: 30px;
+            padding-bottom: 30px;
             .asset-title{
                 margin-bottom:27px;
             }
 }
 
 .columnizer-cols3, .columnizer-cols4{
-            padding-top: 35px;
-            padding-bottom: 35px;
+            padding-top: 30px; 
+            padding-bottom: 30px;
             .asset-title{
                 margin-bottom:23px;
             }
 }
 #top-region,#bottom-region{
-    .columnizer-row:nth-of-type(1),.columnizer-row:last-of-type{
+    .columnizer-row:nth-of-type(1){
        padding-top:10px;
        padding-bottom:20px;
     }
@@ -507,6 +520,7 @@
   #pop-title { font-size: 32px !important; }
   .asset-title { font-size: 20px !important; }
 }
+
 @media screen and (min-width: 960px) and (max-width: 1140px) {
   .columnizer-row,.footer,#cool-header,#my-pop-title{
         width:1140px!important;//layout was broken without this
