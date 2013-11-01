@@ -23,7 +23,7 @@
     Average color can be computed by opening an image in Photoshop and shrinking it down to 1 pixel
   -->
   
-  <meta itemprop="defaultBackground" content="/images/background.png" data-width="1140" data-height="350" data-position="c" data-style="tile" data-color="#665b42">
+  <meta itemprop="defaultBackground" content="/images/background.png" data-width="1140" data-height="350" data-position="c" data-style="fixed" data-color="#665b42">
   <meta itemprop="backgroundContainer" content="#my-pop-title">
 
 
@@ -85,48 +85,63 @@
         {{{body}}}
       {{/asset}}
       
-
       {{#asset "imagegroup" size="1"}}
-        {{{title}}}
+      {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="1080" height="360"}}}
+            {{{imageslider images width="700" height="450" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="700" height="450" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
  
       {{#asset "imagegroup" size="2"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="525" height="353"}}}
+            {{{imageslider images width="335" height="230" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="335" height="230" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="340" height="230"}}}
+            {{{imageslider images width="353" height="230" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="353" height="230" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
       
       {{#asset "imagegroup" size="4"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="247" height="230"}}}
+            {{{imageslider images width="257" height="200" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="257" height="200" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
   
@@ -174,7 +189,7 @@
         </ul>
       {{/asset}}
  
-      {{#asset "embedgroup" size="1" width="1080"}}
+      {{#asset "embedgroup" size="1" width="700"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -182,7 +197,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="2" width="525"}}
+      {{#asset "embedgroup" size="2" width="335"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -190,7 +205,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="3" width="340"}}
+      {{#asset "embedgroup" size="3" width="353"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -198,7 +213,7 @@
         {{{description}}}
       {{/asset}}
       
-      {{#asset "embedgroup" size="4" width="247"}}
+      {{#asset "embedgroup" size="4" width="257"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -232,46 +247,62 @@
       
 
       {{#asset "imagegroup" size="1"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="1080" height="360"}}}
+            {{{imageslider images width="700" height="450" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="700" height="450" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
  
       {{#asset "imagegroup" size="2"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="525" height="353"}}}
+            {{{imageslider images width="335" height="230" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="335" height="230" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="340" height="230"}}}
+            {{{imageslider images width="353" height="230" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="353" height="230" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
       
       {{#asset "imagegroup" size="4"}}
-        {{{title}}}
+        {{#if lightbox_enabled}}
         <div class="my-image-hover-div">
             <div class="my-center">
-                <i class="icon icon-download-alt"/>
+                <i class="icon icon-plus"/>
             </div>
-            {{{imageslider images width="247" height="230"}}}
+            {{{imageslider images width="257" height="200" crop_single = true}}}
         </div>
+        {{else}}
+            {{{imageslider images width="257" height="200" crop_single = true}}}
+        {{/if}}
+        {{{title}}}
         {{{description}}}
       {{/asset}}
   
@@ -319,7 +350,7 @@
         </ul>
       {{/asset}}
  
-      {{#asset "embedgroup" size="1" width="1080"}}
+      {{#asset "embedgroup" size="1" width="700"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -327,7 +358,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="2" width="525"}}
+      {{#asset "embedgroup" size="2" width="335"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -335,7 +366,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="3" width="340"}}
+      {{#asset "embedgroup" size="3" width="353"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
@@ -343,7 +374,7 @@
         {{{description}}}
       {{/asset}}
       
-      {{#asset "embedgroup" size="4" width="247"}}
+      {{#asset "embedgroup" size="4" width="257"}}
         {{{title}}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>

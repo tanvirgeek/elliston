@@ -51,8 +51,6 @@
 
 .prevnext{display:none!important;}
 
-
-
 #pop {
   font-family: @body-font-family;
   color: @text-color;
@@ -67,7 +65,7 @@
     -moz-transition: color 0.5s ease;
     -ms-transition: color 0.5s ease;
     -o-transition: color 0.5s ease;
-    &:hover{color: #4c4c4c;}
+    &:hover{color: darken(@link-color, 20%)}
     &:active { color: lighten(@link-color, 20%); }
   }
 }
@@ -94,15 +92,15 @@
 #cool-header{
     border-top:3px solid #232323;
     position: relative;
-    background-color: #323232;
+    background-color: white;
     width:100%;
     overflow: hidden;
-    padding: 25px 0;
+    padding: 13px 0;
     #cool-header-inner{
-        width: 1080px;
+        width: 1060px;
         margin: 0 auto;
-        overflow:hidden;
-        padding: 0 30px;
+        overflow: hidden;
+        padding: 0 40px;
         #pop-logo { float:left; }
         #pop-links { float:right;  text-align:right!important;margin:0!important; padding:8px 0; }
     }
@@ -111,28 +109,29 @@
 // Pop title
 #my-pop-title{
     width: auto;
-    padding: 121px 30px;
+    padding: 121px 0;
     overflow: hidden;
-    text-align: center;
-    margin: auto;
-    border-top: 10px solid #F8F8F8;
-    border-bottom: 10px solid #F8F8F8;
+    text-align: left;
+    border-top: 10px solid ;
+    border-bottom: 10px solid ;
 }
 #pop-title {
-    max-width: 1080px;
+    max-width: 1060px;
     margin: auto;
-    text-align: center!important;
+    text-align: left;
     padding: 0!important; 
     font-size:	60px;
     font-weight:	700;
     color:	#323232;
     text-transform:	uppercase;
     letter-spacing:	-3px;
-    line-height:	48px;
-    #populr > .text-color-over-color(@background-color);
+    line-height:	1.45;
+     #populr > .text-color-over-color(@background-color);
+    
+    div{
+        max-width:353px;
+    }
 }
-
-
 
 .columnizer-col {
   padding: 10px 0;
@@ -225,7 +224,7 @@
     -ms-transition: all 0.3s linear 0s!important;
     transition: all 0.3s linear 0s!important;
     &:hover{
-        background-color:#4C4C4C!important;
+        background-color:darken(@link-color, 20%)!important;
         -webkit-transition: none!important;
         -moz-transition: none!important;
         -o-transition: none!important;
@@ -285,8 +284,15 @@
   }
 }
 //embed
+
+.asset-type-embedgroup.asset-size-1 .embed { height: 450px; }
+.asset-type-embedgroup.asset-size-2 .embed { height: 230px; }
+.asset-type-embedgroup.asset-size-3 .embed { height: 230px; }
+.asset-type-embedgroup.asset-size-4 .embed { height: 200px; }
+
 .embed{
     margin-bottom:15px;
+    .embedded-object{height:100%!important;}
 }
 
 //styling acording to asset size
@@ -295,7 +301,7 @@
         background-color: #f3f3f3;
         .asset-title {
             font-size: 36px;
-            font-weight: bold;
+            font-weight: 300;
             line-height:1.45;
             text-align: center;
             color:#4c4c4c;
@@ -314,7 +320,7 @@
         background-color: #ffffff;
         .asset-title {
             font-size: 24x;
-            font-weight: bold;
+            font-weight: 300;
             line-height:1.45;
             text-align: center;
             color:#4c4c4c;
@@ -349,11 +355,10 @@
 #bottom-region{
          border-top: 5px solid #323232;
          a {
-            &:hover{color: #8c8c8c}
+            &:hover{color:darken(@link-color, 20%);}
          }
          .link-btn:hover{
-            background-color:#F3F3F3!important;
-            color:#8c8c8c!important;
+            background-color: darken(@link-color, 20%)!important;
             i.icon{color:#8c8c8c!important;}
          }
          .columnizer-row{
@@ -362,7 +367,7 @@
                 color:#FFFFFF;
                 line-height: 1.45;
                 text-align: center;
-                font-weight:bold!important;
+                font-weight:300;
             }
             .description, .body, .description li, .body li,  {
                 color: #808080;
@@ -390,6 +395,7 @@
         }
         .columnizer-cols4{
             .asset-title {
+                font-weight: bold;
                 font-size: 24px;
                 letter-spacing: -1px;
             }
@@ -399,8 +405,12 @@
         }
 }
 //padding-top bottom
+.columnizer-cols1{
+    padding-top:0;
+    padding-bottom:15px;
+}
 
-.columnizer-cols1, .columnizer-cols2{
+.columnizer-cols2{
             padding-top: 35px;
             padding-bottom: 35px;
             .asset-title{
@@ -417,8 +427,8 @@
 }
 #top-region,#bottom-region{
     .columnizer-row:nth-of-type(1),.columnizer-row:last-of-type{
-       padding-top:20px;
-       padding-bottom:40px;
+       padding-top:10px;
+       padding-bottom:20px;
     }
 }
 
@@ -431,14 +441,13 @@
 .footer{
     text-color: #808080;
     background-color: #323232;
-    padding:30px;
+    padding:30px 0;
     border-top: 5px solid #323232;
 }
 
-
 #pop-shearing {
     text-align: center;
-    max-width:1080px;
+    max-width:1060px;
     margin: auto;
     a{
         display: inline-block !important;
@@ -470,20 +479,20 @@
 // fine tune the styling to make your theme look really good on mobile
 // devices.
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 960px) {
   #populr > .mobile-reset();
 
   // Edit the grid for mobile
-  .columnizer-row-inner, #pop-title { max-width: 640px; width:auto!important; }
-  .columnizer-col { margin: 0 10px 20px !important; }
+  .columnizer-row-inner, #pop-title { max-width: 640px; }
+  .columnizer-col { margin: 0 10px 20px !important; width:auto!important; }
   #cool-header-inner{
-        width:auto!important;
+        width: auto!important;
   }
   .columnizer-row {
-            padding-top:40px!important;
-            padding-bottom:40px!important;
+            padding-top:20px!important;
+            padding-bottom:20px!important;
             .asset-title{
-                margin-bottom:18px!important;
+                margin-bottom:15px!important;
             }
   }
   
@@ -497,4 +506,9 @@
 @media screen and (max-width: 600px) {
   #pop-title { font-size: 32px !important; }
   .asset-title { font-size: 20px !important; }
+}
+@media screen and (min-width: 960px) and (max-width: 1140px) {
+  .columnizer-row,.footer,#cool-header,#my-pop-title{
+        width:1140px!important;//layout was broken without this
+   }
 }

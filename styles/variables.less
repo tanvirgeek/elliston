@@ -61,23 +61,31 @@
 // To use your own grid, edit the following properties as needed.
 .columnizer-row-inner {
   margin: 0 auto;
-  max-width: 1140px;
+  width: 1140px;
 }
 .columnizer-col {
 	float: left;
-	margin: 15px;
+	margin-left: 30px;
 
-	.columnizer-cols1 & { width: 1080px;}
-	.columnizer-cols2 & { width: 525px;}
-	.columnizer-cols3 & { width: 340px;}
-        .columnizer-cols4 & { width:247px;
-            &:first-child { margin-right: 14px; }
-            &:last-child { margin-left: 14px; }
+	.columnizer-cols1 & { width: 700px;}
+	.columnizer-cols2 & { width:335px;}
+	.columnizer-cols3 & { width: 353px;
+            &:nth-of-type(3)& { margin-left: 31px; }
         }
-	&:first-child { margin-left: 30px; }
-	&:last-child { margin-right: 30px; }
+        .columnizer-cols4 & { width: 257px;
+            &:nth-of-type(2)& { margin-left: 31px; }
+            &:nth-of-type(3)& { margin-left: 31px; }
+        }
+	&:first-child { margin-left: 10px; }
+	&:last-child { margin-right: 10px; }
 }
-// clearfix for columnizer rows
+
+.columnizer-row-inner{
+    .columnizer-cols1 & { width:720px;}
+    .columnizer-cols2 & { width:720px;}
+}
+
+// clearfix for columnizer rowss
 .columnizer-row:after { display: block; visibility: hidden; height: 0; clear: both; content: ' '; }
 .columnizer-row { *zoom: 1; }
 
