@@ -157,12 +157,15 @@
 // Image asset styling
 #populr > #image-slider-themes > .basic();
 .my-image-hover-div{
+    .populr-image-slider{
+        z-index:15;
+    }
     overflow: hidden;
     position: relative;
     -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
     .my-center{
         position:absolute;
         display:table;
@@ -172,8 +175,7 @@
         top:50%;
         left:0;
         text-align:center;
-        z-index:1000;
-        opacity:0;
+        z-index:10;
         transition: opacity 0.3s ease;
         -webkit-transition: opacity 0.3s ease;
         -moz-transition: opacity 0.3s ease;
@@ -186,9 +188,7 @@
             font-style:normal!important;
         }
     }
-    &:hover .my-center{opacity:1}
-    &:hover{opacity:.9}
-    
+    &:hover .populr-image-slider{opacity:.3}
 }
 // Document asset styling
 #doc-title{
@@ -330,13 +330,16 @@
         }
         .description, .body, .description li, .body li,  {
             color: #4C4C4C;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: normal;
             line-height: 1.7;
         }
     }
     .columnizer-cols2{
             background-color: #ffffff;
+            .description, .body, .description li, .body li,  {
+                font-size: 14px;
+            }
     }
     .columnizer-cols3{
         background-color: #ffffff;
@@ -359,7 +362,7 @@
         background-color: #ffffff;
         .asset-title {
             font-size: 24x;
-            font-weight: bold;
+            font-weight: 300;
             line-height:1.45;
             text-align: center;
             color:#4c4c4c;
@@ -406,7 +409,12 @@
                 
             }
             .description, .body, .description li, .body li,  {
-                font-size: 18px;
+                font-size: 17px;
+            }
+        }
+        .columnizer-cols2{
+             .description, .body, .description li, .body li,  {
+                font-size: 14px;
             }
         }
         .columnizer-cols3{
@@ -417,7 +425,7 @@
         }
         .columnizer-cols4{
             .asset-title {
-                font-weight: bold;
+                font-weight: 300;
                 font-size: 24px;
                 letter-spacing: -1px;
             }
@@ -445,17 +453,12 @@
             }
 }
 #top-region,#bottom-region{
-    .columnizer-row:nth-of-type(1){
+    .columnizer-row:first-child{
        padding-top:10px;
        padding-bottom:20px;
     }
 }
 
-// first row always white
-
-#top-region .columnizer-row:nth-of-type(1){
-    background-color: white;
-}
 
 .footer{
     text-color: #808080;
