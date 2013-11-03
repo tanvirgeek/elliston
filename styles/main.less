@@ -157,15 +157,17 @@
 // Image asset styling
 #populr > #image-slider-themes > .basic();
 .my-image-hover-div{
+    
     .populr-image-slider{
         z-index:15;
+        transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
     }
     overflow: hidden;
     position: relative;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
     .my-center{
         position:absolute;
         display:table;
@@ -176,11 +178,6 @@
         left:0;
         text-align:center;
         z-index:10;
-        transition: opacity 0.3s ease;
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
         .icon{
             text-align:center;
             color:@link-color;
@@ -188,7 +185,7 @@
             font-style:normal!important;
         }
     }
-    &:hover .populr-image-slider{opacity:.3}
+    &:hover .populr-image-slider{opacity:.4}
 }
 // Document asset styling
 #doc-title{
