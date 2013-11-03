@@ -178,17 +178,22 @@
         left:0;
         text-align:center;
         z-index:10;
-        .icon{
-            text-align:center;
-            color:#FFFFFF;
-            font-size:25px;
-            font-style:normal!important;
+        span{
             padding:20px;
+            display: inline-block;
             border-radius:100%;
             -moz-border-radius:100%;
             -ms-border-radius:100%;
             -o-border-radius:100%;
             -webkit-border-radius:100%;
+            background-color:@link-color;
+            .icon{
+                text-align:center;
+                color:#FFFFFF;
+                font-size:25px;
+                font-style:normal!important;
+
+            }
         }
     }
     &:hover .populr-image-slider{opacity:.4}
@@ -306,7 +311,7 @@
 
 //embed
 
-.asset-type-embedgroup.asset-size-1 .embed { height: 450px; }
+.asset-type-embedgroup.asset-size-1 .embed { height: 350px; }
 .asset-type-embedgroup.asset-size-2 .embed { height: 230px; }
 .asset-type-embedgroup.asset-size-3 .embed { height: 230px; }
 .asset-type-embedgroup.asset-size-4 .embed { height: 200px; }
