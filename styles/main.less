@@ -556,7 +556,7 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
   .columnizer-cols2 .columnizer-col { width: 47% !important; }
 
   // Edit the typography for mobile
-  #pop-title { font-size: 40px !important; }
+  #pop-title { font-size: 40px !important; letter-spacing: none !important; }
   .asset-title { font-size: 24px !important; }
   .description, .body, .description li, .body li { font-size: 14px !important; }
   .asset-title, .description, .body, .description li, .body li { text-align: left !important; }
@@ -565,13 +565,12 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 @media screen and (max-width: 900px) {
   #populr > .mobile-reset();
   .columnizer-col { margin-left: 0 !important; margin-right: 0 !important; }
-  .embed { height: 400px !important; }
+  .embed { height: auto !important; }
 }
 
 @media screen and (max-width: 600px) {
   #pop-title { font-size: 32px !important; }
   .asset-title { font-size: 20px !important; }
-  .embed { height: 280px !important; }
   #my-pop-title { padding: 40px !important; }
 }
 
