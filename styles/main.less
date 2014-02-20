@@ -138,8 +138,15 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 
 
 .pplr-icon {
+  position:relative;
   font-size: 24px !important;
   padding: 10px !important;
+  
+  //pplr-icon alignment fixing
+  .asset-size-1 .asset-title & { top:-5px;}
+  .asset-size-2 .asset-title & { top:-1px;}
+  .asset-size-3 .asset-title & {}
+  .asset-size-4 .asset-title & {}
 }
 
 .fullbg-container{
@@ -410,7 +417,7 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 }
 
 #bottom-region{
-         border-top: 5px solid #323232;
+         border-top: 5px solid #252525;
          a {
             &:hover{color:darken(@link-color, 20%);}
          }
@@ -419,7 +426,7 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
             i.icon{color:#8c8c8c!important;}
          }
          .columnizer-row{
-            background: #323232 url('@{base-url}/images/page_glow.png') no-repeat top center;
+            background: #323232 url('@{base-url}/images/debut_dark.png');
             padding-bottom:30px;
             .asset-title {
                 color:#FFFFFF;
@@ -551,7 +558,7 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
   .columnizer-cols2 .columnizer-col { width: 47% !important; }
 
   // Edit the typography for mobile
-  #pop-title { font-size: 40px !important; letter-spacing: none !important; }
+  #pop-title { font-size: 40px !important; letter-spacing: none !important; word-wrap:break-word;}
   .asset-title { font-size: 24px !important; }
   .description, .body, .description li, .body li { font-size: 14px !important; }
   .asset-title, .description, .body, .description li, .body li { text-align: left !important; }
